@@ -284,7 +284,7 @@ SUITE(CombFilter)
             while (iNumFramesRemaining > 0)
             {
 
-                int iNumFrames = std::min(iNumFramesRemaining, rand()/RAND_MAX*17000);
+                int iNumFrames = std::min(iNumFramesRemaining, rand() % (m_iDataLength/3) + 1); //bugfix
 
                 for (int c = 0; c < m_iNumChannels; c++)
                 {
@@ -318,7 +318,7 @@ SUITE(CombFilter)
             while (iNumFramesRemaining > 0)
             {
 
-                int iNumFrames = std::min(iNumFramesRemaining, rand()/RAND_MAX*17000);
+                int iNumFrames = std::min(iNumFramesRemaining, rand() % (m_iDataLength/3) + 1); //bugfix
 
                 for (int c = 0; c < m_iNumChannels; c++)
                 {
